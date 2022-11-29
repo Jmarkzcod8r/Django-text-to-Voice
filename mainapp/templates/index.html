@@ -17,9 +17,10 @@
 
             <label for="exampleFormControlInput1" class="form-label">Country</label>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name='tdl'>
-                <option value="com.au">Australia</option>
-                <option value="co.uk">United Kingdom</option>
+                <!-- <option value="com.au">Australia</option> -->
+                
                 <option value="com">United States</option>
+                <option value="co.uk">United Kingdom</option>
                 <option value="ca">Canada</option>
                 <option value="co.in">India</option>
                 <option value="ie">Ireland</option>
@@ -34,12 +35,13 @@
             </select>
 
             <div class="mb-3">
-                <textarea class="form-control" id="text_area" rows="12" name="text" required  placeholder="Write Something here..."></textarea>
+                <textarea class="form-control" id="text_area" rows="10" name="text" required placeholder="Write Something Here..."  >{{loc}}</textarea>
             </div>
 
             <div class="col-auto">
                <input type="submit" class="btn btn-success" value="Generate">
             </div>
+            <!-- <div>{{loc}}</div> -->
         </form>
     </div>
 {% endblock body %}
