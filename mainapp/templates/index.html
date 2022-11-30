@@ -2,7 +2,7 @@
 
         {% block body %}
         <div class="container">
-        <form action="" method="post">
+        <form action="" method="post" target="_blank">
             {% csrf_token %}
             <label for="exampleFormControlInput1" class="form-label">Language</label>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="lang">
@@ -39,7 +39,7 @@
             </div>
 
             <div class="col-auto">
-               <input type="submit" class="btn btn-success" value="Generate">
+              <a > <input type="submit" class="btn btn-success" value="Generate"></a>
             </div>
             <!-- <div>{{loc}}</div> -->
         </form>

@@ -1,5 +1,6 @@
-.body{
-    background-color: rgb(235, 244, 253);
+/* body{
+    background-color: aqua;
+    color:pink
 }
 .logo_text1 {
     font-family: 'Roboto', sans-serif;
@@ -15,3 +16,17 @@
     justify-content: center;
     display: flex;
 }
+
+.bodyabout {
+    background-color: bisque;
+}
+
+.About-title {
+    background-color: blue;
+    color:red
+}
+
+.slide1:hover {
+    scale:1.5
+    
+} */
