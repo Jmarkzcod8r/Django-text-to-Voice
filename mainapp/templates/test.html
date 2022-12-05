@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ 
+<body style="text-align: center;">
+    <h1 style="color: green">
+        GeeksforGeeks
+    </h1>
+ 
+     
+<p>
+        Type in the textbox to
+        automatically count the words
+    </p>
+ 
+ 
+ 
+    <textarea id="word" oninput="countWord()"
+        rows="10" cols="60">
+    </textarea>
+    <br><br>
+ 
+     
+<p> Word Count:
+        <span id="show">0</span>
+    </p>
+ 
+ 
+ 
+    <script>
+        
+    function countWord() {
+// Get the input text value
+var words = document
+.getElementById("word").value;
+
+// Initialize the word counter
+var count = 0;
+
+// space character
+var split = words.split(' ');
+
+// Loop through the words and
+// increase the counter when
+// each split word is not empty
+for (var i = 0; i < split.length; i++) {
+if (split[i] != "") {
+count += 1;
+}
+}
+
+document.getElementById("show")}
+</script>
+</body>
+ 
+</html>

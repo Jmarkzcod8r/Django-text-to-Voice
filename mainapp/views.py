@@ -43,3 +43,7 @@ def about_page(request):
     print("this is about page")
     return render(request, 'about.html')
 
+def test_page(request):
+    print("this is test page")
+    return render(request, 'test.html')
+
