@@ -6,6 +6,7 @@ import random
 import os
 import shutil
 from datetime import datetime
+from .models import * # Product, Section, Post
 
 
 
@@ -41,9 +42,36 @@ def index_page(request):
     
 def about_page(request):
     print("this is about page")
-    return render(request, 'about.html')
+    sections = Section.objects.all()
+    return render(request, 'about.html',{'sections':sections})
 
 def test_page(request):
     print("this is test page")
     return render(request, 'test.html')
+
+
+# def todo_page(request):
+#     print("this is todo page")
+#     return render(request, 'todo.html')
+
+def todo_page(request):
+# def createpost(request):
+    if request.method == 'POST':
+        print('received')
+        if request.POST.get('title') and request.POST.get('content'): # are true:
+            post=Post()
+            post.title= request.POST.get('title')
+            post.content= request.POST.get('content')
+            post.save()
+            # return render(request,'todo.html')
+            
+    Posts = Post.objects.all()
+    # sections = Section.objects.all()
+            
+    # return render(request, 'todo.html', {'sections':sections} )  
+    return render(request, 'todo.html', {'Posts':Posts} )  
+
+
+        # else:
+        #         return render(request,'todo.html')
 

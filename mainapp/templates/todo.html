@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Create a Post </title>
+</head>
+
+<body>
+<h1>Create a Post </h1>
+
+<form action="" method="POST">
+{% csrf_token %}
+
+    Title: <input type="text" name="title"/><br/>
+    Content: <br/>
+    <textarea cols="35" rows="8" name="content">
+    </textarea><br/>
+
+<input type="submit" value="Post"/> ---> This is like a designated button to sending your data 
+</form>
+
+<div> This is Title</div>
+<div>
+ 
+
+    {% for sec in sections %}
+    <span>{{sec}} </span> 
+      {% endfor %}
+
+      <!-- {% for pos in Posts %}
+      <span>{{pos.title}} </span> 
+        {% endfor %} -->
+
+        <span>{{Posts.0.title}} </span> 
+        <span>{{Posts.0.content}}</span>
+        <div>
+            <span>{{Posts.1.title}} </span> 
+            <span>{{Posts.1.content}}</span>
+        </div>
+        <!-- <span>{{Posts.1.title}} </span>  -->
+        <!-- <span>{{Posts.2.content}} </span>  -->
+
+   
+
+
+</div>
+
+</body>
+
+</html>
